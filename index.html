@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Project Management Tool</h1>
+        <p>Manage your projects and tasks easily</p>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+            <h2>Create New Project</h2>
+            <input type="text" id="projectName"
+                   placeholder="Enter project name">
+            <button onclick="addProject()">Create Project</button>
+        </section>
+
+        <section class="card">
+            <h2>Add New Task</h2>
+
+            <input type="text" id="taskName"
+                   placeholder="Enter task name">
+
+            <input type="text" id="assignedTo"
+                   placeholder="Assign to (person's name)">
+
+            <select id="projectSelect">
+                <option value="">Select Project</option>
+            </select>
+
+            <select id="taskStatus">
+                <option value="To Do">To Do</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+            </select>
+
+            <button onclick="addTask()">Add Task</button>
+        </section>
+
+        <section class="card">
+            <h2>My Projects</h2>
+            <div id="projects"></div>
+        </section>
+
+        <section class="board">
+            <h2>Task Board</h2>
+
+            <div class="columns">
+
+                <div class="column">
+                    <h3>To Do</h3>
+                    <div id="todoTasks"></div>
+                </div>
+
+                <div class="column">
+                    <h3>In Progress</h3>
+                    <div id="progressTasks"></div>
+                </div>
+
+                <div class="column">
+                    <h3>Completed</h3>
+                    <div id="completedTasks"></div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

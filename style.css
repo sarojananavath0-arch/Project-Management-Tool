@@ -1,0 +1,111 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f8;
+    color: #333;
+}
+
+header {
+    background: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 25px auto;
+}
+
+.card, .board {
+    background: white;
+    padding: 22px;
+    margin-bottom: 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #00000015;
+}
+
+h2 {
+    margin-bottom: 18px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 4px;
+}
+
+button:hover {
+    background: #174bb5;
+}
+
+.delete-btn {
+    background: #dc3545;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.column {
+    background: #eef2ff;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 180px;
+}
+
+.column h3 {
+    margin-bottom: 15px;
+}
+
+.task, .project {
+    background: white;
+    padding: 14px;
+    margin-bottom: 12px;
+    border-radius: 7px;
+    box-shadow: 0 1px 5px #00000015;
+    overflow-wrap: anywhere;
+}
+
+.task p {
+    margin: 8px 0;
+}
+
+.task select {
+    margin-top: 8px;
+}
+
+@media (max-width: 700px) {
+    .columns {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
